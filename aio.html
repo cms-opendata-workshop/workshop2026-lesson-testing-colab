@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Lesson Title: All in One View</title>
+<title>Testing out Colab: All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="assets/themetoggle.js"></script><link rel="stylesheet" type="text/css" href="assets/styles.css">
 <script src="assets/scripts.js" type="text/javascript"></script><!-- mathjax --><script type="text/x-mathjax-config">
@@ -34,13 +34,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="dpoa-logo" alt="CMS DPOA logo" src="assets/images/dpoa-logo.png"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
-            <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+        <img id="dpoa-logo" alt="CMS DPOA logo" src="assets/images/dpoa-logo.png"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
+            <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#field-testing-alpha-stage" class="external-link alert-link">
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -94,7 +94,7 @@
       <img class="small-logo" alt="CMS DPOA small logo" src="assets/images/dpoa-logo-sm.png">
 </div>
     <div class="lesson-title-md">
-      Lesson Title
+      Testing out Colab
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -105,7 +105,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Lesson Title
+            Testing out Colab
           </span>
         </li>
         <li class="nav-item">
@@ -141,7 +141,7 @@
   </div>
 <!--/div.container-fluid -->
 </nav><div class="col-md-12 mobile-title">
-  Lesson Title
+  Testing out Colab
 </div>
 
 <aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
@@ -243,7 +243,19 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="introduction.html">1. Introduction</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="01-colab-examples.html">2. Colab examples</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -304,11 +316,11 @@
         <!-- START: inst/pkgdown/templates/content-extra.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <main id="main-content" class="main-content"><div class="container lesson-content">
+        <h1>All in One View</h1>
         
-        
-<section id="aio-introduction"><p>Content from <a href="introduction.html">Using Markdown</a></p>
+<section id="aio-introduction"><p>Content from <a href="introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2024-06-19 |
+<p>Last updated on 2026-07-14 |
 
         <a href="https://github.com/cms-opendata-workshop/workbench-template-md/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -322,8 +334,10 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What is Colab?</li>
+<li>Is it the same or different than a Jupyter notebook?</li>
+<li>Can it do more than just python?</li>
+<li>How do I use it to write or execute python code?</li>
 </ul>
 </div>
 </div>
@@ -333,9 +347,220 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Learn how to open a shared Colab notebook, edit it, and save
+it.</li>
+<li>Learn how to execute python from within Colab.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="three-things-that-are-easy-to-confuse">Three things that are easy to confuse<a class="anchor" aria-label="anchor" href="#three-things-that-are-easy-to-confuse"></a>
+</h2>
+<hr class="half-width">
+<p>Before we open a single notebook, it helps to untangle three terms
+that often get used interchangeably but really mean different things:
+<strong>Python</strong>, <strong>Jupyter notebooks</strong>, and
+<strong>Colab</strong>. In short, Python is a <em>language</em>, a
+Jupyter notebook is a <em>place to write and run that language
+interactively</em>, and Colab is <em>a way to use those notebooks in the
+cloud without installing anything</em>. If you keep that hierarchy in
+mind — language, then notebook, then cloud host — everything else in
+this workshop will fit into place.</p>
+</section><section><h2 class="section-heading" id="python-the-language">Python: the language<a class="anchor" aria-label="anchor" href="#python-the-language"></a>
+</h2>
+<hr class="half-width">
+<p><a href="https://www.python.org/" class="external-link">Python</a> is a <strong>programming
+language</strong> — the actual instructions you write to tell a computer
+what to do. It was created by Guido van Rossum and first released in
+1991, and, contrary to popular belief, it is named after the British
+comedy troupe <em>Monty Python’s Flying Circus</em>, not the snake.
+Python was designed to be readable and approachable, which is a big part
+of why it has become one of the most widely used languages in science,
+data analysis, and education. The current version is Python 3.14
+(released in late 2025), and you can read more about its history and
+design on the <a href="https://www.python.org/" class="external-link">official Python
+website</a> and its <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" class="external-link">Wikipedia
+entry</a>.</p>
+<p>On its own, Python is just the language. To <em>use</em> it, you need
+some environment that can read your code and run it — and that is where
+notebooks come in.</p>
+</section><section><h2 class="section-heading" id="jupyter-notebooks-the-interactive-environment">Jupyter notebooks: the interactive environment<a class="anchor" aria-label="anchor" href="#jupyter-notebooks-the-interactive-environment"></a>
+</h2>
+<hr class="half-width">
+<p>A <strong>Jupyter notebook</strong> is a document that lets you write
+and run code in small, editable chunks called <em>cells</em>, and it
+stitches together live code, the output that code produces (numbers,
+tables, plots), and formatted explanatory text all in one place. That
+mix of “code plus narrative” is what makes notebooks so popular for
+teaching and for exploratory science. The notebook file itself has the
+extension <code>.ipynb</code>, and you open and run it inside an
+application — either the classic Jupyter Notebook interface or the more
+modern, IDE-like <a href="https://jupyter.org/" class="external-link">JupyterLab</a>.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>IDE stands for Interactive Development Environment, and refers to a
+program that enables you to both edit and execute computer code.</p>
+</div>
+</div>
+</div>
+<p>Notebooks have a lovely origin story for a physics audience. The
+project began as <strong>IPython</strong>, built in 2001 by [Fernando
+Pérez](<a href="https://en.wikipedia.org/wiki/Fernando_P%C3%A9rez_(software_developer)" class="external-link uri">https://en.wikipedia.org/wiki/Fernando_P%C3%A9rez_(software_developer)</a>
+while he was a particle-physics graduate student looking for a better
+way to poke at his simulation data. The browser-based IPython Notebook
+arrived in 2011, and in 2014 it was rebranded as part of the broader <a href="https://en.wikipedia.org/wiki/Project_Jupyter" class="external-link">Project
+Jupyter</a>. The name “Jupyter” is a nod to three core languages —
+<strong>Ju</strong>lia, <strong>Py</strong>thon, and <strong>R</strong>
+— and an homage to Galileo’s own notebooks documenting the moons of
+Jupiter. That history hints at an important point: <strong>notebooks are
+not limited to Python.</strong> Jupyter runs code through
+interchangeable <em>kernels</em>, so the same notebook interface can
+execute R, Julia, and dozens of other languages, as well as ordinary
+shell commands.</p>
+</section><section><h2 class="section-heading" id="colab-jupyter-in-the-cloud">Colab: Jupyter in the cloud<a class="anchor" aria-label="anchor" href="#colab-jupyter-in-the-cloud"></a>
+</h2>
+<hr class="half-width">
+<p><strong>Google Colaboratory</strong> — “Colab” for short — is a free,
+cloud-based service from Google Research (first released in 2017) that
+lets you run Jupyter-style notebooks entirely in your web browser, with
+<strong>nothing to install</strong>. The notebooks run on Google’s
+computers rather than yours, save to your <a href="https://drive.google.com/" class="external-link">Google Drive</a> like any other Google
+document, and can be shared and edited collaboratively the way a Google
+Doc can. Colab also gives you free (if limited) access to more powerful
+hardware such as GPUs. You can explore it at <a href="https://colab.research.google.com/" class="external-link">colab.research.google.com</a>
+and read the details in the <a href="https://research.google.com/colaboratory/faq.html" class="external-link">Colab
+FAQ</a>.</p>
+<p>So, to answer two of our opening questions directly: Colab is
+<strong>essentially Jupyter hosted in the cloud</strong>. If you already
+know Jupyter, you know Colab — a handful of menu items and keyboard
+shortcuts differ, but the cell-based, code-plus-text experience is the
+same. And because it is built on the same kernel system as Jupyter, it
+can run more than just Python. The tidy summary to carry with you:
+<em>Python is the language, Jupyter is the notebook environment that
+runs it, and Colab is Google’s cloud version of that
+environment.</em></p>
+</section><section><h2 class="section-heading" id="saving-your-own-copy-so-your-edits-stick">Saving your own copy so your edits stick<a class="anchor" aria-label="anchor" href="#saving-your-own-copy-so-your-edits-stick"></a>
+</h2>
+<hr class="half-width">
+<p>There is one habit worth building early. When you open a notebook we
+have shared with you, your changes are <strong>not</strong>
+automatically saved back to a copy you own — and anything you type can
+be lost when the session ends. To keep your work, make your own copy in
+your Google Drive as soon as you open a shared notebook.</p>
+<div id="save-a-copy-to-your-drive-first" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="save-a-copy-to-your-drive-first" class="callout-inner">
+<h3 class="callout-title">Save a copy to your Drive first</h3>
+<div class="callout-content">
+<p>In the Colab menu, choose <strong>File → Save a copy in
+Drive</strong>. This creates a personal copy in your own Google Drive
+that you can edit freely, and your changes will persist across sessions.
+You will need to be signed in to a Google account to do this.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="optional">Optional!<a class="anchor" aria-label="anchor" href="#optional"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="running-the-notebooks-locally-instead">Running the notebooks locally instead<a class="anchor" aria-label="anchor" href="#running-the-notebooks-locally-instead"></a>
+</h3>
+<p>You are not required to stay in the cloud. If you would rather run
+these notebooks on your own machine — for offline work, for privacy, or
+simply to keep them after the workshop — you can download any Colab
+notebook and open it in Jupyter locally.</p>
+<ol style="list-style-type: decimal">
+<li>In Colab, choose <strong>File → Download → Download .ipynb</strong>
+to save the notebook file to your computer.</li>
+<li>Install Python together with Jupyter. The simplest route for
+newcomers is the <a href="https://www.anaconda.com/download" class="external-link">Anaconda
+distribution</a>, which bundles Python, JupyterLab, and most of the
+scientific libraries you’ll need. Alternatively, install Python and then
+run <code>pip install jupyterlab</code> (see the <a href="https://jupyter.org/install" class="external-link">Jupyter installation guide</a>).</li>
+<li>Launch JupyterLab and open your downloaded <code>.ipynb</code>
+file.</li>
+</ol>
+<p>Keep in mind that a few Colab conveniences do not carry over:
+mounting Google Drive, the free GPUs, and Colab’s pre-installed packages
+are cloud features, so when running locally you may need to install some
+libraries yourself with <code>pip</code> or <code>conda</code>.</p>
+</div>
+</section><section><h2 class="section-heading" id="whats-next">What’s next<a class="anchor" aria-label="anchor" href="#whats-next"></a>
+</h2>
+<hr class="half-width">
+<p>With those distinctions in hand, you’re ready for the hands-on part.
+The shared Colab notebooks will walk you step by step through opening,
+editing, and executing cells — so you can start writing and running
+Python right away.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>
+<strong>Python</strong> is a programming language; a <strong>Jupyter
+notebook</strong> is an interactive environment that runs code in cells
+alongside text and output; <strong>Colab</strong> is Google’s free,
+cloud-hosted version of that notebook environment.</li>
+<li>Colab is essentially Jupyter in the cloud — if you know one, you can
+use the other.</li>
+<li>Notebooks are not Python-only; they can run other languages (and
+shell commands) through different kernels.</li>
+<li>Opening a shared notebook does not save your edits. Use <strong>File
+→ Save a copy in Drive</strong> to keep a persistent, editable
+copy.</li>
+<li>You can download any notebook (<strong>File → Download → Download
+.ipynb</strong>) and run it locally with Jupyter, e.g. via <a href="https://www.anaconda.com/download" class="external-link">Anaconda</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-01-colab-examples"><p>Content from <a href="01-colab-examples.html">Colab examples</a></p>
+<hr>
+<p>Last updated on 2026-07-14 |
+
+        <a href="https://github.com/cms-opendata-workshop/workbench-template-md/edit/main/episodes/01-colab-examples.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Can you open, edit, and execute python code in a Colab
+environment</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Familiarize yourself with working with basic python in a Colab
+environment</li>
 </ul>
 </div>
 </div>
@@ -345,128 +570,84 @@ challenge blocks</li>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.txt" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
-<div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within challenge blocks?</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+<p>In this section, you’ll be shown how to open and work with
+Colab/Jupyter/python. If you are familiar with this, you can skip
+it.</p>
+<p>However, the next part is very important. It’s a Colab notebook that
+walks you through how to open some of the files we’ll be working with
+this week so make sure you go through it!</p>
+</section><section><h2 class="section-heading" id="using-colab">Using Colab<a class="anchor" aria-label="anchor" href="#using-colab"></a>
 </h2>
 <hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
+<div id="optionalfor-some-of-you" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
+<span class="callout-header">Callout</span>
+<div id="optionalfor-some-of-you" class="callout-inner">
+<h3 class="callout-title">Optional…for some of you</h3>
 <div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
+<p>If you are familiar with python, Jupyter notebooks, and Colab, you
+can skip this section and move on to “Opening files and making
+plots”</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+<p>If you are not familiar with python or Jupyter notebooks or Colab,
+here are 3 relatively short video lectures from Siena University’s
+course, <em>DATA 110: Exploratory Data Analysis and Visualization</em>.
+Links to the empty Colab notebooks are also provided so that you can
+make a copy and go through the material on your own as well.</p>
+<figure><img src="fig/videoframe_2765.png" width="800" alt="Screenshot of video lecture on Colab and python" class="figure mx-auto d-block"><div class="figcaption"><a href="https://www.youtube.com/watch?v=gn4a7ipi1Ag&amp;list=PLhgRDgkcKYCng9w" class="external-link">Colab
+and python</a></div>
+</figure><ul>
+<li><a href="https://colab.research.google.com/drive/1vN3_YCYe5y9GyJIKrJ4sdAUdjXRMGRXd?usp=sharing" class="external-link">Link
+to starter Colab notebook</a></li>
+</ul>
+<figure><img src="fig/videoframe_1189.png" width="800" alt="Screenshot of video lecture on working with Jupyter cells" class="figure mx-auto d-block"><div class="figcaption"><a href="https://www.youtube.com/watch?v=F1OWEePwiWc&amp;list=PLhgRDgkcKYCng9wbc5IGY4OLYjrKW1PBx&amp;index=4" class="external-link">Working
+with Jupyter notebook cells</a></div>
+</figure><ul>
+<li><a href="https://colab.research.google.com/drive/1REr7xqnVAk1jaPNWp0Hy8a-N9CPAUgVQ?usp=sharing" class="external-link">Link
+to starter Colab notebook</a></li>
+</ul>
+<figure><img src="fig/videoframe_1755.png" width="800" alt="Screenshot of video lecture on working with Jupyter cells" class="figure mx-auto d-block"><div class="figcaption"><a href="https://www.youtube.com/watch?v=528igw4dr7o&amp;list=PLhgRDgkcKYCng9wbc5IGY4OLYjrKW1PBx&amp;index=5" class="external-link">The
+basics of python</a></div>
+</figure><ul>
+<li><a href="https://colab.research.google.com/drive/1gs4mX_4NBMVofKApHf5WITSMXB9FixJG?usp=sharing" class="external-link">Link
+to starter Colab notebook</a></li>
+</ul></section><section><h2 class="section-heading" id="opening-files-and-making-plots">Opening files and making plots<a class="anchor" aria-label="anchor" href="#opening-files-and-making-plots"></a>
 </h2>
 <hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
-<div id="keypoints1" class="callout keypoints">
+<p>In this workshop, you’ll be working in a Colab environment to open
+files (.csv, .root, .parquet, etc.), extract data, and make plots of
+that data. In this section, you’ll open and run through a Colab notebook
+to test your setup and your understanding.</p>
+<div id="reminder" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="reminder" class="callout-inner">
+<h3 class="callout-title">Reminder!</h3>
+<div class="callout-content">
+<p>To make sure you can save your edits, after you’ve opened the file,
+go to the <strong>File</strong> dropdown menu, and select <em>“Save a
+copy in Drive”</em>.</p>
+</div>
+</div>
+</div>
+<figure><img src="fig/colab_sanity_check.png" width="800" alt="Screenshot of colab notebook output" class="figure mx-auto d-block"><div class="figcaption"><a href="https://drive.google.com/file/d/1kCkTd3N7J_-VGFnkRKK9uWRrvpNMaJ3l/view?usp=sharing" class="external-link">Colab
+notebook to test your setup and understanding.</a></div>
+</figure><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>Colab notebooks are an easy way to write, edit, execute and
+<em>share</em> python code</li>
 </ul>
 </div>
 </div>
@@ -493,14 +674,14 @@ any links that you are not going to use.
 	
         | <a href="https://github.com/cms-opendata-workshop/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/cms-opendata-workshop/workbench-template-md/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/cms-opendata-workshop/workbench-template-md/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:cms-dpoa-coordinator@cern.ch">Contact</a> | <a href="https://opendata.cern.ch/docs/about-cms" class="external-link">About</a></p>
+				<p><a href="https://github.com/cms-opendata-workshop/workbench-template-md/blob/main/" class="external-link">Cite</a> | <a href="mailto:cms-dpoa-coordinator@cern.ch">Contact</a> | <a href="https://opendata.cern.ch/docs/about-cms" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
 
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.10" class="external-link">sandpaper (0.16.10)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.7" class="external-link">pegboard (0.7.7)</a>, and <a href="https://github.com/cms-opendata-workshop/varnish/tree/405b7a74ee1b2fc89c3e49e116ce96d4d65182b3" class="external-link">varnish (1.0.3)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.2" class="external-link">sandpaper (0.20.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/cms-opendata-workshop/varnish/tree/405b7a74ee1b2fc89c3e49e116ce96d4d65182b3" class="external-link">varnish (1.0.3)</a></p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -512,19 +693,19 @@ any links that you are not going to use.
   <script type="application/ld+json">
     {
   "@context": "https://schema.org",
-  "@type": "TrainingMaterial",
+  "@type": "LearningResource",
   "@id": "https://cms-opendata-workshop.github.io/workbench-template-md/aio.html",
   "inLanguage": "en",
-  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+  "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, CMS",
+  "keywords": "software, data, lesson, CMS, particle physics, physics",
   "name": "All in One View",
   "creativeWorkStatus": "active",
   "url": "https://cms-opendata-workshop.github.io/workbench-template-md/aio.html",
   "identifier": "https://cms-opendata-workshop.github.io/workbench-template-md/aio.html",
-  "dateCreated": "2024-07-16",
-  "dateModified": "2024-12-10",
-  "datePublished": "2024-12-10"
+  "dateCreated": "2026-07-14",
+  "dateModified": "2026-07-14",
+  "datePublished": "2026-07-14"
 }
 
   </script><script>
