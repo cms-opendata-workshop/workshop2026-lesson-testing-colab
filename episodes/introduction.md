@@ -61,7 +61,7 @@ enables you to both edit and execute computer code.
 
 
 Notebooks have a lovely origin story for a physics audience. The project began as
-**IPython**, built in 2001 by [Fernando Pérez](https://en.wikipedia.org/wiki/Fernando_P%C3%A9rez_(software_developer)
+**IPython**, built in 2001 by [Fernando Pérez](https://en.wikipedia.org/wiki/Fernando_P%C3%A9rez_(software_developer))
 while he was a particle-physics graduate student looking for a better way to poke at his
 simulation data. The browser-based IPython Notebook arrived in 2011, and in 2014 it was
 rebranded as part of the broader [Project Jupyter](https://en.wikipedia.org/wiki/Project_Jupyter).
