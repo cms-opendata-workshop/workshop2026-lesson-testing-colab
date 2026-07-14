@@ -15,17 +15,17 @@ carpentry: 'incubator'
 varnish: 'cms-opendata-workshop/varnish'
 
 # Overall title for pages.
-title: 'Lesson Title' # FIXME
+title: 'Testing out Colab' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ # FIXME
+created: ~ # 2024-07-08
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, CMS' # FIXME
+keywords: 'software, data, lesson, CMS, particle physics, physics' # FIXME
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' # FIXME
+life_cycle: 'alpha' # FIXME
 
 # License of the lesson
 license: 'CC-BY 4.0'
@@ -64,9 +64,10 @@ contact: 'cms-dpoa-coordinator@cern.ch' # FIXME
 # Order of episodes in your lesson
 episodes: 
 - introduction.md
+- 01-colab-examples.md
 
 # Information for Learners
-learners: 
+#learners: 
 
 # Information for Instructors
 instructors: 
